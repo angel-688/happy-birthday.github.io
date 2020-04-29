@@ -1,0 +1,475 @@
+
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+	font-size: 16px;
+	font-family: consolas, monospace;
+}		
+
+@font-face {
+  font-family: 'consolas';
+  src: url('../fonts//CONSOLA.eot');
+  src: local('☺'), url('../fonts//CONSOLA.woff') format('woff'), url('../fonts//CONSOLA.ttf') format('truetype'), url('../fonts//CONSOLA.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative; 
+	background-color: red;
+	animation: color 15s infinite;
+}
+
+ @keyframes color{
+	0%{
+		background-color:red;
+	}
+	25%{
+		background-color: purple;
+	}
+	50%{
+		background-color: yellow;
+	}
+	75%{
+		background-color: green;
+	}
+	100%{
+		background-color: blue;
+	}
+}
+.text{
+	position: absolute;
+	top: -30%;
+	left: 50%;
+	color: rgba(20, 204, 72, 0.99);
+	font-size: 70px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	z-index: 10;
+	transition: all 2s ease 10.5s;
+}
+.wrapper:hover .text{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translate(-50%,0) rotate(360deg);
+	background-color: #ffff00;
+}
+.main_text{
+	background-color: #ffff00;
+	width: 550px;
+	height: 400px;
+	position: absolute;
+	top: 30%;
+	left: -40%;
+	z-index: 30;
+	font-size: 20px;
+	animation: text 15s infinite;
+	perspective: 400px;
+}
+.main_text p{
+	margin: 0px 0px 20px 0px;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 0px 10px;
+	color: #000;
+}
+.wrapper:hover .main_text{
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	transition: all 3s ease 11.5s;
+	transform-style:preserve-3d;
+	transform: translate(-26%,0) rotateX(360deg);
+	transform-origin:top left;
+	background-color: #ffff00;
+}
+@keyframes text{
+	0%{
+		background-color: yellow;
+	}
+	25%{
+		background-color: green;
+	}
+	50%{
+		background-color: blue;
+	}
+	75%{
+		background-color: purple;
+	}
+	100%{
+		background-color: red;
+	}
+}
+.main__photo {}
+.main__photo img:nth-child(1){
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	position: absolute;
+	width: 300px;
+	height: 350px;
+	top: calc(50% - 150px);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 6;
+}
+  .main__photo img:nth-child(2){
+ 	position: absolute;
+ 	top: 40.1%;
+ 	left: -25%;
+ 	width: 250px;
+ 	height: 320px;
+ 	 animation: fly_2 2s 1 3.5s forwards;
+ }
+ .main__photo img:nth-child(3){
+ 	position: absolute;
+ 	top: 40%;
+ 	right: -25%;
+ 	width: 280px;
+ 	height: 340px;
+ 	  animation: fly_1 2s 1 3.5s forwards; 
+ 	 z-index: 5;
+ }
+ @keyframes fly_1{
+ 	0%{
+ 		top: 40%;
+ 		right: -15%;
+ 	}
+ 	100%{
+ 		top: 32%;
+ 		right: 255px;
+ 	}
+ }
+ @keyframes fly_2{
+ 	0%{
+ 		top: 40.1%;
+ 		left: -15%;
+ 	}
+ 	100%{
+ 		top: 35.1%;
+ 		left: 285px;
+ 	}
+ } 
+ 
+ .second__photo {}
+ .second__photo img{
+ 	position: absolute;
+ 	top: -23%;
+ 	left: -16%;
+ 	width: 280px;
+ 	height: 270px;
+ 	  animation: fly_3 2s 1 4.5s forwards; 
+ }
+ 
+ @keyframes fly_3{
+ 	0%{
+ 		left: -9%;
+ 		top: -18%;
+ 	}
+ 	82%{
+ 		top: 0;
+ 	}
+ 	100%{
+ 		top: 0px;
+ 		left: 270px;
+ 	}
+ } 
+ .third__photo {}
+ .third__photo img{
+ 	position: absolute;
+ 	top: -25%;
+ 	right: -18%;
+ 	width: 290px;
+ 	height: 250px;
+   animation: fly_4 2s 1 4.5s forwards; 
+ 	z-index: 5;
+ }
+ @keyframes fly_4{
+ 	0%{
+ 		right: -18%;
+ 		top: -25%;
+ 	}
+ 	100%{
+ 		top: 0px;
+ 		right: 260px;
+ 	}
+ } 
+ .for__photo{
+ }
+ .for__photo img{
+ 	position: absolute;
+ 	bottom: -55%;
+ 	left: -20%;
+ 	width: 280px;
+ 	height: 280px;
+ 	 animation: fly_5 3s 1 5s forwards;
+ 	z-index: 4;
+ }
+ @keyframes fly_5{
+ 	0%{
+ 		left: -20%;
+ 		bottom: -55%;
+ 	}
+ 	50%{
+ 		bottom:0;
+ 		left: 83%;
+ 	}
+ 	100%{
+ 		bottom: 63.7%;
+ 		left: 81%;
+ 
+ 	}
+ }
+ .five__photo{
+ }
+ .five__photo img{
+ 	position: absolute;
+ 	bottom: -30%;
+ 	right: -19%;
+ 	width: 260px;
+ 	height: 300px;
+ 	 animation: fly_6 1.5s 1 6.5s forwards; 
+ 	z-index: 3;
+ }
+ @keyframes fly_6{
+ 	0%{
+ 		right: -10%;
+ 		bottom: -27%;
+ 	}
+ 	100%{
+ 		bottom: 0;
+ 		right: 0;
+ 	}
+ }
+ .six__photo{
+ }
+ .six__photo img{
+ 	position: absolute;
+ 	bottom: -45%;
+ 	left: 484px;
+ 	width: 300px;
+ 	height: 350px;
+ 	 animation: fly_7 2s 1 8s forwards; 
+ }
+ @keyframes fly_7{
+ 	0%{
+ 		left: 484px;
+ 		bottom: -30%;
+ 	}
+ 	50%{
+ 		bottom: 40%;
+ 		left: 485px;
+ 	}
+ 	100%{
+ 		bottom: 30%;
+ 		left: 79%;
+ 	}
+ }
+ .seven__photo{}
+ .seven__photo img{
+ 	position: absolute;
+ 	bottom: -40%;
+ 	left: 484px;
+ 	width: 285px;
+ 	height: 300px;
+ 	 animation: fly_8 1.5s 1 5.3s forwards; 
+ 	z-index: 8;
+ }
+ 
+ @keyframes fly_8{
+ 	0%{
+ 		left: 484px;
+ 		bottom: -30%;
+ 	}
+ 	50%{
+ 		left: 484px;
+ 		bottom: 0;
+ 	}
+ 	100%{
+ 		bottom: 0;
+ 		left: 0;
+ 	}
+ }
+ .eight__photo{
+ }
+ .eight__photo img{
+ 	position: absolute;
+ 	bottom: -40%;
+ 	right: 240px;
+ 	width: 290px;
+ 	height: 300px;
+ 	 animation: fly_9 3.5s 1 3s forwards; 
+ 	z-index: 7;
+ }
+ @keyframes fly_9{
+ 	0%{
+ 		right: 240px;
+ 		bottom: -30%;
+ 	}
+ 	25%{
+ 		bottom: 63%;
+ 		right: 483px;
+ 	}
+ 	50%{
+ 		bottom: 63%;
+ 		right: 0;
+ 	}
+ 	75%{
+ 		bottom: 0;
+ 		right: 0;
+ 	}
+ 	100%{
+ 		bottom: 63%;
+ 		right: 80%;
+ 	}
+ }
+ .nine__photo{}
+ .nine__photo img{
+ 	position: absolute;
+ 	top: -550%;
+ 	left: 50%;
+ 	width: 315px;
+ 	height: 355px;
+ 	 animation: fly_10 2.8s 1 3.3s forwards; 
+ }
+ @keyframes fly_10{
+ 	0%{
+ 		top: -55%;
+ 		left: 50%;
+ 	}
+ 	25%{
+ 		top: 40%;
+ 		left: 80%;
+ 	}
+ 	50%{
+ 		top: 40%;
+ 		left: 0;
+ 	}
+ 	100%{
+ 		top: 0px;
+ 		left: 39%;
+ 	}
+ }
+ .ten__photo{}
+ .ten__photo img{
+ 	position: absolute;
+ 	top: -55%;
+ 	left: 30%;
+ 	width: 285px;
+ 	height: 350px;
+ 	animation: fly_11 5s 1 1s forwards; 
+ 	  z-index: 7;
+ } 
+@keyframes fly_11{
+	0%{
+		top: -55%;
+		left: 30%;
+	}
+	14.2%{
+		top: 63%;
+		left: 30%;
+	}
+	28.4%{
+		top: 31.5%;
+		left: 30%;
+	}
+	42.6%{
+		top: 31.5%;
+		left: 50%;
+	}
+	56.8%{
+		top: 0;
+		left: 50%;
+	}
+	71%{
+		top: 63%;
+		left: 50%;
+	}
+	85.2%{
+		top: 31.5%;
+		left: 50%;
+	}
+	100%{
+		top: 35%;
+		left: 0;
+	}
+}
+.eleven__photo{}
+.eleven__photo img{
+	position: absolute;
+	bottom: -55%;
+	right: 18%;
+	width: 270px;
+	height: 370px;
+	 animation: fly_12 1.5s 1 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; 
+}
+@keyframes fly_12{
+	0%{
+		bottom: -55%;
+		right: 18%;
+	}
+	100%{
+		bottom: -5%;
+		right: 19%;
+	}
+}
+.twelve__photo{}
+.twelve__photo img{
+	position:absolute;
+	bottom: -55%;
+	right: 37%;
+	width: 280px;
+	height: 370px;
+	 animation: fly_13 1.5s 1 cubic-bezier(0.68, -0.55, 0.265, 1.55) 9s forwards; 
+}
+@keyframes fly_13{
+	0%{
+		bottom: -55%;
+		right: 37%;
+	}
+	100%{
+		bottom: -10%;
+		right: 37%;
+	}
+}
+.thirteen__photo{}
+.thirteen__photo img{
+	position:absolute;
+	bottom: -55%;
+	left: 30%;
+	width: 300px;
+	height: 370px;
+	 animation: fly_14 1.5s 1 cubic-bezier(0.68, -0.55, 0.265, 1.55) 9s forwards; 
+}
+@keyframes fly_14{
+	0%{
+		bottom: -55%;
+		left: 30%;
+	}
+	100%{
+		bottom: -24%;
+		left: 20.7%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
